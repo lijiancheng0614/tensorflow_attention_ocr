@@ -11,9 +11,9 @@ inference on TensorFlow models in production:
 https://www.tensorflow.org/serving/serving_basic
 
 Usage:
-python demo_inference.py --batch_size=32 \
+python infer.py --batch_size=32 \
   --checkpoint=model.ckpt-399731\
-  --image_path_pattern=./datasets/data/fsns/temp/fsns_train_%02d.png
+  --image_path_pattern=testdata/fsns_train_%02d.png
 """
 import numpy as np
 import PIL.Image
@@ -29,7 +29,6 @@ import data_provider
 FLAGS = flags.FLAGS
 common_flags.define()
 
-# e.g. ./datasets/data/fsns/temp/fsns_train_%02d.png
 flags.DEFINE_string('image_path_pattern', '',
                     'A file pattern with a placeholder for the image index.')
 

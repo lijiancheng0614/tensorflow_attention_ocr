@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import demo_inference
+import infer
 import tensorflow as tf
 from tensorflow.python.training import monitored_session
 
@@ -22,11 +22,11 @@ class DemoInferenceTest(tf.test.TestCase):
   def test_moving_variables_properly_loaded_from_a_checkpoint(self):
     batch_size = 32
     dataset_name = 'fsns'
-    images_placeholder, endpoints = demo_inference.create_model(batch_size,
-                                                                dataset_name)
+    images_placeholder, endpoints = infer.create_model(batch_size,
+                                                       dataset_name)
     image_path_pattern = 'testdata/fsns_train_%02d.png'
-    images_data = demo_inference.load_images(image_path_pattern, batch_size,
-                                             dataset_name)
+    images_data = infer.load_images(image_path_pattern, batch_size,
+                                    dataset_name)
     tensor_name = 'AttentionOcr_v1/conv_tower_fn/INCE/InceptionV3/Conv2d_2a_3x3/BatchNorm/moving_mean'
     moving_mean_tf = tf.get_default_graph().get_tensor_by_name(
       tensor_name + ':0')
@@ -44,9 +44,8 @@ class DemoInferenceTest(tf.test.TestCase):
 
   def test_correct_results_on_test_data(self):
     image_path_pattern = 'testdata/fsns_train_%02d.png'
-    predictions = demo_inference.run(_CHECKPOINT, self._batch_size,
-                                     'fsns',
-                                     image_path_pattern)
+    predictions = infer.run(_CHECKPOINT, self._batch_size,
+                            'fsns', image_path_pattern)
     self.assertEqual([
       'Boulevard de Lunel░░░░░░░░░░░░░░░░░░░',
       'Rue de Provence░░░░░░░░░░░░░░░░░░░░░░',
