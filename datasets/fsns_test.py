@@ -33,7 +33,7 @@ def get_test_split():
 
 
 def dataset_dir():
-  return os.path.join(os.path.dirname(__file__), 'testdata/fsns')
+  return os.path.join(os.path.dirname(__file__), 'data/fsns')
 
 
 class FsnsTest(tf.test.TestCase):
