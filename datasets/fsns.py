@@ -29,16 +29,16 @@ DEFAULT_CONFIG = {
     'name': 'FSNS',
     'splits': {
         'train': {
-            'size': 1044868,
-            'pattern': 'train/train*'
+            'size': 50,
+            'pattern': 'fsns-*'
         },
         'test': {
-            'size': 20404,
-            'pattern': 'test/test*'
+            'size': 50,
+            'pattern': 'fsns-*'
         },
         'validation': {
-            'size': 16150,
-            'pattern': 'validation/validation*'
+            'size': 50,
+            'pattern': 'fsns-*'
         }
     },
     'charset_filename': 'charset_size=134.txt',
