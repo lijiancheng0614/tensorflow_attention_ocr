@@ -60,5 +60,5 @@ python eval.py \
 ```bash
 python infer.py \
     --checkpoint=model.ckpt-399731 \
-    --image_path_pattern=testdata/fsns_train_%02d.png
+    --image_path_pattern=datasets/data/fsns/testdata/fsns_train_%02d.png
 ```
