@@ -50,8 +50,8 @@ def define():
   flags.DEFINE_string('train_log_dir', '/tmp/attention_ocr/train',
                       'Directory where to write event logs.')
 
-  flags.DEFINE_string('dataset_name', 'fsns',
-                      'Name of the dataset. Supported: fsns')
+  flags.DEFINE_string('dataset_name', 'ocr',
+                      'Name of the dataset. Supported: ocr')
 
   flags.DEFINE_string('split_name', 'train',
                       'Dataset split name to run evaluation for: test,train.')

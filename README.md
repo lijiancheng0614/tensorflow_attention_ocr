@@ -14,10 +14,14 @@ Forked from https://github.com/tensorflow/models/tree/master/research/attention_
     ```
     datasets
     +-- data
-    |   +-- fsns
-    |       +-- charset_size=134.txt
-    |       +-- fsns-00000-of-00001
-    +-- fsns.py
+    |   +-- ocr
+    |       +-- annotations
+    |       +-- images
+    |       +-- charset.txt
+    |       +-- list_test.txt
+    |       +-- list_train.txt
+    |       +-- tfrecords
+    +-- ocr.py
     ```
 
 
@@ -60,5 +64,5 @@ python eval.py \
 ```bash
 python infer.py \
     --checkpoint=model.ckpt-399731 \
-    --image_path_pattern=datasets/data/fsns/testdata/fsns_train_%02d.png
+    --image_path_pattern=datasets/data/ocr/images/%d.jpg
 ```

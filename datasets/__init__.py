@@ -13,6 +13,6 @@
 # limitations under the License.
 # ==============================================================================
 
-import fsns
+import ocr
 
-__all__ = [fsns]
+__all__ = [ocr]

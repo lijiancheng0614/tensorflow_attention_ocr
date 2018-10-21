@@ -13,7 +13,7 @@ https://www.tensorflow.org/serving/serving_basic
 Usage:
 python infer.py --batch_size=32 \
   --checkpoint=model.ckpt-399731\
-  --image_path_pattern=datasets/data/fsns/testdata/fsns_train_%02d.png
+  --image_path_pattern=datasets/data/ocr/images/%d.jpg
 """
 import numpy as np
 import PIL.Image

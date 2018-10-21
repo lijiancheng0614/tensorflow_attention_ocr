@@ -33,7 +33,7 @@ common_flags.define()
 flags.DEFINE_integer('num_batches', 100,
                      'Number of batches to run eval for.')
 
-flags.DEFINE_string('eval_log_dir', '/tmp/attention_ocr/eval',
+flags.DEFINE_string('eval_log_dir', 'eval_logs',
                     'Directory where the evaluation results are saved to.')
 
 flags.DEFINE_integer('eval_interval_secs', 60,

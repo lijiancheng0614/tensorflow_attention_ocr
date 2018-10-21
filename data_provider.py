@@ -158,7 +158,7 @@ def get_data(dataset,
              shuffle=True):
   """Wraps calls to DatasetDataProviders and shuffle_batch.
 
-  For more details about supported Dataset objects refer to datasets/fsns.py.
+  For more details about supported Dataset objects refer to datasets/ocr.py.
 
   Args:
     dataset: a slim.data.dataset.Dataset object.
